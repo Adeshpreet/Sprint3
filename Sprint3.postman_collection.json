@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "30c05abd-e750-4e6a-b2ba-67d6f478645a",
+		"name": "Sprint3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22845785"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Admin SignIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"adeshpreet.singh.399@gmail.com\",\n    \"password\":\"qwerty\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/signin/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signin",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign Teacher",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"adesh@yopmail.com\",\n    \"assignedTeacher\":\"hestabit@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/assignteacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"assignteacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Student",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"XDD@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/approve/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"approve",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Approve Teacher",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"hestabit@yopmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/approve/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"approve",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "SignUp Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Hestabit\",\n    \"email\": \"hestabit@yopmail.com\",\n    \"password\": \"qwertyuiop\",\n    \"address\": \"XD Road\",\n    \"profilePicture\": \"none\",\n    \"currentSchool\": \"XD\",\n    \"previousSchool\": \"XD\",\n    \"experience\": \"2 Years\",\n    \"expertiseInSubjects\": [\"English\", \"Hindi\"]\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/signup/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"hestabit@yopmail.com\",\n    \"password\":\"qwertyuiop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/signin/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signin",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Teacher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Teacher",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Boss\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/edit/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edit",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Teacher",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/delete/teacher",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"delete",
+								"teacher"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "SignUp Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Adesh\",\n    \"email\": \"adesh@yopmail.com\",\n    \"password\": \"qwerty\",\n    \"address\": \"XD Road\",\n    \"profilePicture\": \"XD\",\n    \"currentSchool\": \"XD School\",\n    \"previousSchool\": \"XDD School\",\n    \"parentsDetails\": { \"fathersName\": \"XD\", \"mothersName\": \"XD\" }\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/signup/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignIn Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"adesh@yopmail.com\",\n    \"password\":\"qwerty\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/signin/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"signin",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Student",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Student",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"King\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/edit/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"edit",
+								"student"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Student",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8000/delete/student",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"delete",
+								"student"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
